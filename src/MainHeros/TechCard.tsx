@@ -47,8 +47,8 @@ export default function TechCard({
           disabled={isAdded}
           className={`mt-4 w-full rounded-lg py-2.5 text-xs font-medium transition-colors ${
             isAdded
-              ? "cursor-not-allowed bg-emerald-50 text-bold"
-              : "bg-[#0a0f1d] text-white hover:bg-white hover:text-[#0a0f1d] hover:ring-2 hover:ring-[#0a0f1d]"
+              ? "cursor-not-allowed bg-emerald-100 text-emerald-700"
+              : "bg-[#0a0f1d] text-white hover:bg-white hover:text-[#0a0f1d] hover:ring-2 hover:ring-[#18b58b]"
           }`}
         >
           {isAdded ? "✓ Added to Stack" : "Add to Stack"}

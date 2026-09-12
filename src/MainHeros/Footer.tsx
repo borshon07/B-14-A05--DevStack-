@@ -51,7 +51,9 @@ export default function Footer() {
     <footer className="border-t border-slate-100 bg-white">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">
+            
           {/* Brand column */}
+
           <div className="col-span-2 sm:col-span-3 lg:col-span-2">
 
             <a href="/">
@@ -81,6 +83,7 @@ export default function Footer() {
           </div>
 
           {/* Link columns */}
+
           {footerColumns.map((column) => (
             <div key={column.title}>
               <h3 className="text-sm font-semibold text-slate-900">
@@ -103,6 +106,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
+
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-100 pt-6 sm:flex-row">
           <p className="text-xs text-slate-400">
             © {currentYear} Dev Stack. All rights reserved.

@@ -119,7 +119,7 @@ export default function Nav() {
           ))}
         </nav>
 
-        {/* ================= RIGHT ================= */}
+        {/*  Sign Up - Sign In buttons */}
 
         <div className="flex items-center justify-self-end gap-2 sm:gap-4 lg:gap-6">
           {/* Sign In */}

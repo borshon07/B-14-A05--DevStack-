@@ -46,7 +46,7 @@ export default function StackSidebar({
                 <button
                   onClick={() => onRemove(tech.id)}
                   aria-label={`Remove ${tech.name}`}
-                  className="text-slate-400 transition-colors hover:text-red-500"
+                  className="text-slate-400 font-bold transition-colors hover:text-red-500"
                 >
                   ✕
                 </button>
@@ -56,7 +56,7 @@ export default function StackSidebar({
 
           <button
             onClick={onRemoveAll}
-            className="mt-4 w-full rounded-lg border border-slate-200 py-2.5 text-xs font-medium text-slate-500 transition-colors hover:bg-slate-50 hover:text-red-500"
+            className="mt-4 w-full rounded-lg border border-slate-200 py-2.5 text-xs font-bold text-slate-800 transition-colors hover:bg-red-600 hover:text-white"
           >
             Remove All
           </button>

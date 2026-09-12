@@ -11,10 +11,11 @@ export default function TechCard({ tech, onAddToStack }: TechCardProps) {
       <div>
         <div className="flex items-start justify-between">
           <div className="flex h-10 w-10 items-center justify-center">
-           <img src={tech.icon} alt={tech.name} className="h-7 w-7" />
+            <img src={tech.icon} alt={tech.name} className="h-7 w-7" />
           </div>
           {tech.badge && (
-            <span className="rounded-full border border-sky-100 bg-sky-50 px-3 py-1 text-[11.5px] font-semibold text-sky-600">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-sky-100 bg-sky-50/50 px-2.5 py-0.5 text-[11.5px] font-semibold text-sky-700">
+              <span className="h-1.5 w-1.5 rounded-full bg-sky-500 animate-pulse"></span>
               {tech.badge}
             </span>
           )}
@@ -39,7 +40,7 @@ export default function TechCard({ tech, onAddToStack }: TechCardProps) {
 
         <button
           onClick={() => onAddToStack(tech.id)}
-          className="mt-4 w-full rounded-lg bg-[#0a0f1d] py-2.5 text-xs font-medium text-white transition-colors hover:bg-slate-800"
+          className="mt-4 w-full rounded-lg bg-[#0a0f1d] py-2.5 text-xs font-bold text-white hover:text-black transition-colors hover:bg-white border border-[#0a0f1d]"
         >
           Add to Stack
         </button>

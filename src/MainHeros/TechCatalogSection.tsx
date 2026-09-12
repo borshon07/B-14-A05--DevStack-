@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import TechCard from "./TechCard";
 import StackSidebar from "./StackSidebar";
 import Spinner from "./Spainer";
-import { technologies as technologiesData } from "../Data/technologies";
+import technologiesData from "../data/technologies.json";
 import type { Technology } from "../types/tech";
 
 export default function TechCatalogSection() {
@@ -15,7 +15,7 @@ export default function TechCatalogSection() {
     // Simulate fetching JSON data (e.g. from an API)
     setLoading(true);
     const timer = setTimeout(() => {
-      setTechnologies(technologiesData);
+      setTechnologies(technologiesData as Technology[]);
       setLoading(false);
     }, 400);
 

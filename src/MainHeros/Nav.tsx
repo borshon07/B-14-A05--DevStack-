@@ -40,38 +40,39 @@ export default function Nav() {
       }`}
     >
       {/* Main Navbar */}
+      {/* Main Navbar */}
       <div
         className="
-          mx-auto
-          grid
-          h-[68px]
-          max-w-[1280px]
-          grid-cols-3
-          items-center
-          px-4
-          sm:px-6
-          lg:px-8
-        "
+    mx-auto
+    grid
+    h-[68px]
+    max-w-[1280px]
+    grid-cols-3
+    items-center
+    px-4
+    sm:px-6
+    lg:px-8
+  "
       >
         {/* ================= LEFT ================= */}
 
         {/* Mobile: Hamburger */}
-        <div className="flex items-center justify-start">
+        <div className="flex shrink-0 items-center justify-start">
           <button
             onClick={() => setIsOpen((prev) => !prev)}
             aria-label="Toggle menu"
             aria-expanded={isOpen}
-            className="flex items-center justify-center text-slate-700 lg:hidden"
+            className="flex items-center justify-center text-slate-700 xl:hidden"
           >
             {isOpen ? (
-              <X size={22} />
+              <X size={20} />
             ) : (
-              <img src={hamburgerIcon} alt="Menu" className="h-6 w-6" />
+              <img src={hamburgerIcon} alt="Menu" className="h-5 w-5" />
             )}
           </button>
 
           {/* Desktop: Logo */}
-          <a href="/" className="hidden items-center gap-2.5 lg:flex">
+          <a href="/" className="hidden items-center gap-2.5 xl:flex">
             <img src={logoImage} alt="DevStack Logo" className="h-8 w-auto" />
           </a>
         </div>
@@ -79,18 +80,18 @@ export default function Nav() {
         {/* ================= CENTER ================= */}
 
         {/* Mobile: Logo */}
-        <a href="/" className="flex justify-self-center lg:hidden">
+        <a href="/" className="flex justify-self-center xl:hidden">
           <img src={logoImage} alt="DevStack Logo" className="h-8 w-auto" />
         </a>
 
         {/* Desktop: Nav Links */}
-        <nav className="hidden items-center justify-self-center gap-10 lg:flex">
+        <nav className="hidden items-center justify-self-center gap-6 xl:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setActiveLink(link.href)}
-              className={`text-sm transition-colors ${
+              className={`whitespace-nowrap text-sm transition-colors ${
                 activeLink === link.href
                   ? "font-semibold text-[#db2777]"
                   : "font-medium text-slate-600 hover:text-slate-900"
@@ -102,22 +103,17 @@ export default function Nav() {
         </nav>
 
         {/*  Sign Up - Sign In buttons */}
-
-        <div className="flex items-center justify-self-end gap-2 sm:gap-4 lg:gap-6">
-          {/* Sign In - plain text link, no gradient background */}
-
+        <div className="flex shrink-0 items-center justify-self-end gap-2 sm:gap-3 xl:gap-5">
           <a
             href="/signin"
-            className="text-sm font-medium text-slate-700 transition-colors hover:text-slate-900"
+            className="hidden whitespace-nowrap text-sm font-medium text-slate-700 hover:text-slate-900 xl:block"
           >
             Sign In
           </a>
 
-          {/* Sign Up - gradient background button */}
-
           <a
             href="/signup"
-            className="bg-gradient-brand rounded-full px-4 py-2 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90 sm:px-5 sm:py-2.5"
+            className="bg-gradient-brand whitespace-nowrap rounded-full px-3 py-2 text-xs font-semibold text-white shadow-sm transition-opacity hover:opacity-90 sm:px-5 sm:py-2.5 sm:text-sm"
           >
             Sign Up
           </a>
@@ -129,16 +125,16 @@ export default function Nav() {
       {isOpen && (
         <nav
           className="
-            flex
-            flex-col
-            gap-1
-            border-t
-            border-slate-100
-            bg-white
-            px-4
-            py-3
-            lg:hidden
-          "
+      flex
+      flex-col
+      gap-1
+      border-t
+      border-slate-100
+      bg-white
+      px-4
+      py-3
+      xl:hidden
+    "
         >
           {navLinks.map((link) => (
             <a
@@ -157,6 +153,16 @@ export default function Nav() {
               {link.label}
             </a>
           ))}
+
+          {/* Sign In - only visible inside mobile menu */}
+
+          <a
+            href="/signin"
+            onClick={() => setIsOpen(false)}
+            className="rounded-md px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-50"
+          >
+            Sign In
+          </a>
         </nav>
       )}
     </header>

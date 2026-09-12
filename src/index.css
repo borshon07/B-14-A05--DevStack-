@@ -16,3 +16,27 @@
 .bg-gradient-brand {
   background-image: var(--gradient-brand);
 }
+.text-gradient-brand {
+  background-image: var(--gradient-brand);
+  background-size: 200% auto;
+  background-position: 0% center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: background-position 0.5s ease;
+}
+
+.text-gradient-brand:hover {
+  background-position: 100% center;
+}
+
+.bg-gradient-brand {
+  background-image: var(--gradient-brand);
+  background-size: 200% auto;
+  background-position: 0% center;
+  transition: background-position 0.5s ease;
+}
+
+.bg-gradient-brand:hover {
+  background-position: 100% center;
+}

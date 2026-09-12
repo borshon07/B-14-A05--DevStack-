@@ -66,39 +66,21 @@ export default function Nav() {
             {isOpen ? (
               <X size={22} />
             ) : (
-              <img
-                src={hamburgerIcon}
-                alt="Menu"
-                className="h-6 w-6"
-              />
+              <img src={hamburgerIcon} alt="Menu" className="h-6 w-6" />
             )}
           </button>
 
           {/* Desktop: Logo */}
-          <a
-            href="/"
-            className="hidden items-center gap-2.5 lg:flex"
-          >
-            <img
-              src={logoImage}
-              alt="DevStack Logo"
-              className="h-8 w-auto"
-            />
+          <a href="/" className="hidden items-center gap-2.5 lg:flex">
+            <img src={logoImage} alt="DevStack Logo" className="h-8 w-auto" />
           </a>
         </div>
 
         {/* ================= CENTER ================= */}
 
         {/* Mobile: Logo */}
-        <a
-          href="/"
-          className="flex justify-self-center lg:hidden"
-        >
-          <img
-            src={logoImage}
-            alt="DevStack Logo"
-            className="h-8 w-auto"
-          />
+        <a href="/" className="flex justify-self-center lg:hidden">
+          <img src={logoImage} alt="DevStack Logo" className="h-8 w-auto" />
         </a>
 
         {/* Desktop: Nav Links */}
@@ -124,17 +106,10 @@ export default function Nav() {
         <div className="flex items-center justify-self-end gap-2 sm:gap-4 lg:gap-6">
           {/* Sign In */}
           <a
-            href="/signin"
-            className="
-              text-xs
-              font-medium
-              text-slate-700
-              transition-colors
-              hover:text-slate-900
-              sm:text-sm
-            "
+            href="/signup"
+            className="bg-gradient-brand rounded-full px-4 py-2 text-sm font-semibold text-Black shadow-sm transition-opacity hover:bg-gray-200 sm:px-5 sm:py-2.5"
           >
-            Sign In
+            Sign In 
           </a>
 
           {/* Sign Up */}
@@ -150,10 +125,10 @@ export default function Nav() {
               text-white
               shadow-[0px_1px_1px_#fbcfe8]
               transition-colors
-              hover:bg-[#c11871]
               sm:px-5
               sm:py-2.5
               sm:text-sm
+              hover:bg-[#7c3aed]
             "
           >
             Sign Up

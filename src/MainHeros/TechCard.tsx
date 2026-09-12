@@ -2,10 +2,15 @@ import type { Technology } from "../types/tech";
 
 interface TechCardProps {
   tech: Technology;
+  isAdded: boolean;
   onAddToStack: (id: string) => void;
 }
 
-export default function TechCard({ tech, onAddToStack }: TechCardProps) {
+export default function TechCard({
+  tech,
+  isAdded,
+  onAddToStack,
+}: TechCardProps) {
   return (
     <div className="flex flex-col justify-between rounded-2xl border border-slate-100 bg-white p-5 shadow-[0_2px_10px_-3px_rgba(0,0,0,0.05)]">
       <div>
@@ -14,8 +19,7 @@ export default function TechCard({ tech, onAddToStack }: TechCardProps) {
             <img src={tech.icon} alt={tech.name} className="h-7 w-7" />
           </div>
           {tech.badge && (
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-sky-100 bg-sky-50/50 px-2.5 py-0.5 text-[11.5px] font-semibold text-sky-700">
-              <span className="h-1.5 w-1.5 rounded-full bg-sky-500 animate-pulse"></span>
+            <span className="rounded-full border border-sky-100 bg-sky-50 px-3 py-1 text-[13.5px] font-semibold text-sky-600">
               {tech.badge}
             </span>
           )}
@@ -40,9 +44,14 @@ export default function TechCard({ tech, onAddToStack }: TechCardProps) {
 
         <button
           onClick={() => onAddToStack(tech.id)}
-          className="mt-4 w-full rounded-lg bg-[#0a0f1d] py-2.5 text-xs font-bold text-white hover:text-black transition-colors hover:bg-white border border-[#0a0f1d]"
+          disabled={isAdded}
+          className={`mt-4 w-full rounded-lg py-2.5 text-xs font-medium transition-colors ${
+            isAdded
+              ? "cursor-not-allowed bg-emerald-50 text-bold"
+              : "bg-[#0a0f1d] text-white hover:bg-white hover:text-[#0a0f1d] hover:ring-2 hover:ring-[#0a0f1d]"
+          }`}
         >
-          Add to Stack
+          {isAdded ? "✓ Added to Stack" : "Add to Stack"}
         </button>
       </div>
     </div>

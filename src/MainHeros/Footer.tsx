@@ -1,5 +1,4 @@
-import footerIcon from "../UI/logo-text.png"; 
-
+import footerIcon from "../UI/logo-text.png";
 
 interface FooterLink {
   label: string;
@@ -51,34 +50,33 @@ export default function Footer() {
     <footer className="border-t border-slate-100 bg-white">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">
-            
           {/* Brand column */}
 
           <div className="col-span-2 sm:col-span-3 lg:col-span-2">
-
             <a href="/">
-              <img src={footerIcon} alt="DevStack Logo" className="h-8 w-auto" />
+              <img
+                src={footerIcon}
+                alt="DevStack Logo"
+                className="h-8 w-auto"
+              />
             </a>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-500">
-              Explore, compare, and build your ideal development stack from
-              the best frontend, backend, database, and tooling options.
+            <p className="italic mt-4 max-w-xs text-sm leading-relaxed text-slate-500">
+              Explore, compare, and build your ideal development stack from the
+              best frontend, backend, database, and tooling options.
             </p>
 
             <div className="mt-6 flex items-center gap-4">
               {socialLinks.map((social) => (
-
                 <a
                   key={social.label}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-slate-400 transition-colors hover:text-slate-900" >
+                  className="text-bold text-black text-bg-white hover:text-red-500 hover:underline transition-colors"
+                >
                   {social.label}
-            
                 </a>
-
               ))}
-
             </div>
           </div>
 
@@ -108,19 +106,19 @@ export default function Footer() {
         {/* Bottom bar */}
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-100 pt-6 sm:flex-row">
-          <p className="text-xs text-slate-400">
+          <p className="text-xs text-black/60">
             © {currentYear} Dev Stack. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <a
               href="/privacy"
-              className="text-xs text-slate-400 transition-colors hover:text-slate-900"
-                >
+              className="text-md text-slate-600 transition-colors hover:text-slate-900 hover:text-bold hover:underline"
+            >
               Privacy Policy
-             </a>
+            </a>
             <a
               href="/terms"
-              className="text-xs text-slate-400 transition-colors hover:text-slate-900"
+              className="text-md text-slate-600 transition-colors hover:text-slate-900 hover:text-bold hover:underline"
             >
               Terms of Service
             </a>

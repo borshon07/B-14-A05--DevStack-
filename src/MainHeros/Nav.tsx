@@ -104,32 +104,20 @@ export default function Nav() {
         {/*  Sign Up - Sign In buttons */}
 
         <div className="flex items-center justify-self-end gap-2 sm:gap-4 lg:gap-6">
-          {/* Sign In */}
+          {/* Sign In - plain text link, no gradient background */}
+
           <a
-            href="/signup"
-            className="bg-gradient-brand rounded-full px-4 py-2 text-sm font-semibold text-Black shadow-sm transition-opacity hover:bg-gray-200 sm:px-5 sm:py-2.5"
+            href="/signin"
+            className="text-sm font-medium text-slate-700 transition-colors hover:text-slate-900"
           >
-            Sign In 
+            Sign In
           </a>
 
-          {/* Sign Up */}
+          {/* Sign Up - gradient background button */}
+
           <a
             href="/signup"
-            className="
-              rounded-full
-              bg-[#d91b7e]
-              px-3
-              py-1.5
-              text-xs
-              font-semibold
-              text-white
-              shadow-[0px_1px_1px_#fbcfe8]
-              transition-colors
-              sm:px-5
-              sm:py-2.5
-              sm:text-sm
-              hover:bg-[#7c3aed]
-            "
+            className="bg-gradient-brand rounded-full px-4 py-2 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90 sm:px-5 sm:py-2.5"
           >
             Sign Up
           </a>

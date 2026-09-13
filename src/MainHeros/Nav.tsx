@@ -40,7 +40,7 @@ export default function Nav() {
       }`}
     >
       <div className="mx-auto grid h-[68px] max-w-[1280px] grid-cols-3 items-center px-4 sm:px-6 lg:px-8">
-        {/* Mobile: Hamburger */}
+        
 
         <div className="flex shrink-0 items-center justify-start">
           <button
@@ -56,20 +56,15 @@ export default function Nav() {
             )}
           </button>
 
-          {/* Desktop: Logo */}
           <a href="/" className="hidden items-center gap-2.5 xl:flex">
             <img src={logoImage} alt="DevStack Logo" className="h-8 w-auto" />
           </a>
         </div>
 
-        {/* ================= CENTER ================= */}
-
-        {/* Mobile: Logo */}
         <a href="/" className="flex justify-self-center xl:hidden">
           <img src={logoImage} alt="DevStack Logo" className="h-8 w-auto" />
         </a>
 
-        {/* Desktop: Nav Links */}
         <nav className="hidden items-center justify-self-center gap-6 xl:flex">
           {navLinks.map((link) => (
             <a
@@ -87,7 +82,6 @@ export default function Nav() {
           ))}
         </nav>
 
-        {/*  Sign Up - Sign In buttons */}
         <div className="flex shrink-0 items-center justify-self-end gap-2 sm:gap-3 xl:gap-5">
           <a
             href="/signin"

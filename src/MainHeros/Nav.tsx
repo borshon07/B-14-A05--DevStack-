@@ -105,8 +105,6 @@ export default function Nav() {
         </div>
       </div>
 
-      {/* ===== MOBILE Styles ==== */}
-
       {isOpen && (
         <nav className="flex flex-col gap-1 border-t border-slate-100 bg-white px-4 py-3 xl:hidden">
           {navLinks.map((link) => (
@@ -126,8 +124,6 @@ export default function Nav() {
               {link.label}
             </a>
           ))}
-
-          {/* Sign In - Only visible inside mobile menu */}
 
           <a
             href="/signin"

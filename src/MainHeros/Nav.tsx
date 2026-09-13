@@ -39,24 +39,10 @@ export default function Nav() {
         scrolled ? "shadow-sm" : ""
       }`}
     >
-      {/* Main Navbar */}
-      {/* Main Navbar */}
-      <div
-        className="
-    mx-auto
-    grid
-    h-[68px]
-    max-w-[1280px]
-    grid-cols-3
-    items-center
-    px-4
-    sm:px-6
-    lg:px-8
-  "
-      >
-        {/* ================= LEFT ================= */}
-
+      <div className="mx-auto grid h-[68px] max-w-[1280px] grid-cols-3 items-center px-4 sm:px-6 lg:px-8">
+        
         {/* Mobile: Hamburger */}
+
         <div className="flex shrink-0 items-center justify-start">
           <button
             onClick={() => setIsOpen((prev) => !prev)}
@@ -120,7 +106,7 @@ export default function Nav() {
         </div>
       </div>
 
-      {/* ================= MOBILE MENU ================= */}
+      {/* ===== MOBILE Styles ==== */}
 
       {isOpen && (
         <nav
@@ -154,7 +140,7 @@ export default function Nav() {
             </a>
           ))}
 
-          {/* Sign In - only visible inside mobile menu */}
+          {/* Sign In - Only visible inside mobile menu */}
 
           <a
             href="/signin"

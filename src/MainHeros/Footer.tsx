@@ -39,7 +39,7 @@ const footerColumns: FooterColumn[] = [
 
 const socialLinks = [
   { label: "GitHub", href: "https://github.com" },
-  { label: "Twitter", href: "https://twitter.com" },
+  { label: "Twitter", href: "https://x.com" },
   { label: "LinkedIn", href: "https://linkedin.com" },
 ];
 

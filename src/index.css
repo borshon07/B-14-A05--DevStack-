@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-/* Single source of truth for the brand gradient */
-
 :root {
   --gradient-brand: linear-gradient(90deg, #f97316 0%, #ec4899 50%, #7c3aed 100%);
 }
@@ -16,6 +14,7 @@
 .bg-gradient-brand {
   background-image: var(--gradient-brand);
 }
+
 .text-gradient-brand {
   background-image: var(--gradient-brand);
   background-size: 200% auto;

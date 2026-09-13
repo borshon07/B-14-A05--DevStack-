@@ -40,7 +40,6 @@ export default function Nav() {
       }`}
     >
       <div className="mx-auto grid h-[68px] max-w-[1280px] grid-cols-3 items-center px-4 sm:px-6 lg:px-8">
-        
         {/* Mobile: Hamburger */}
 
         <div className="flex shrink-0 items-center justify-start">
@@ -109,19 +108,7 @@ export default function Nav() {
       {/* ===== MOBILE Styles ==== */}
 
       {isOpen && (
-        <nav
-          className="
-      flex
-      flex-col
-      gap-1
-      border-t
-      border-slate-100
-      bg-white
-      px-4
-      py-3
-      xl:hidden
-    "
-        >
+        <nav className="flex flex-col gap-1 border-t border-slate-100 bg-white px-4 py-3 xl:hidden">
           {navLinks.map((link) => (
             <a
               key={link.href}

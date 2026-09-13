@@ -12,7 +12,7 @@ export default function HeroSection() {
           </span>
         </h1>
 
-        <p className="mt-6 max-w-[576px] text-base leading-relaxed text-slate-600 sm:text-lg sm:leading-[29px]">
+        <p className="italic mt-6 max-w-[576px] text-base leading-relaxed text-slate-600 sm:text-lg sm:leading-[29px]">
           Explore frontend, backend, database, and tooling options, compare them
           side by side, and put together the stack that fits your next project.
         </p>
@@ -21,7 +21,7 @@ export default function HeroSection() {
           <button className="bg-gradient-brand w-full rounded-lg px-4 py-3 text-sm font-semibold text-white transition sm:w-[168px]">
             Explore Technologies
           </button>
-          
+
           <button className="w-full rounded-lg border border-gray-200 bg-white px-4 py-3 text-md text-gray-700 transition hover:bg-black hover:text-white sm:w-[170px]">
             Learn More
           </button>

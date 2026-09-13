@@ -14,13 +14,17 @@ I built this as a practice project to get more comfortable with React, TypeScrip
 - **React-Toastify** – for toast notifications
 - **JSON** – for storing the technology data
 - **Vite** – for the dev server and build tool
--> **Icon Source:** All technology logos/icons are sourced from [TechIcons](https://techicons.dev/), a clean and free collection of ready-to-use tech logos.
+
+> **Icon Source:** All technology logos/icons are sourced from [TechIcons](https://techicons.dev/), a clean and free collection of ready-to-use tech logos.
 
 ## ✨ Features
 
-- **Add to Stack** – Click "Add to Stack" on any card and it instantly appears in your "Your Stack" sidebar with its icon, name, and category.
+- **Add to Stack** – Click "Add to Stack" on any card and it instantly appears in your "Your Stack" sidebar with its icon, name, and category. Once added, the button switches to a disabled "✓ Added to Stack" state.
 - **No Duplicates Allowed** – Try adding the same technology twice and you'll get a warning toast instead of a duplicate entry.
-- **Live Toast Feedback** – Every action — add, remove, or remove all — triggers a clean toast notification so you always know what just happened.
+- **Live Toast Feedback** – Every action — add, remove, or remove all — triggers a clean toast notification (via React-Toastify) so you always know what just happened.
+- **Loading State** – The technology data loads with a short spinner, simulating a real fetch before the cards appear.
+- **Shared Gradient Theme** – The brand name, hero heading highlight, and primary buttons all use one shared orange → pink → violet gradient, defined in a single CSS variable so the whole theme can be changed from one place.
+- **Fully Responsive** – The navbar, hero section, and tech grid all adapt cleanly across mobile, tablet, and desktop.
 
 ---
 
